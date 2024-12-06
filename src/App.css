@@ -234,3 +234,148 @@ body {
 .footer .footer-link:hover {
   text-decoration: underline;
 }
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  /* Navigation */
+  .navbar .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar .nav-links {
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar a {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Container */
+  .container {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  /* Product Grid */
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Card */
+  .card-img {
+    height: 15rem;
+  }
+
+  /* Modal */
+  .modal-content {
+    width: 90%;
+    padding: 1rem;
+    margin: 0 5%;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 1rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-link {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Smaller Mobile Screens */
+@media screen and (max-width: 480px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .subheading {
+    font-size: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-description {
+    font-size: 0.875rem;
+  }
+
+  .card-price {
+    font-size: 1rem;
+  }
+
+  /* Ensure text inputs and buttons are easily tappable */
+  .form-input, 
+  .form-submit, 
+  .order-btn {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Additional Responsive Tweaks */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  min-width: 320px;
+}
+/* Navbar Responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-link {
+    padding: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+  }
+}
+
+/* Ensure menu toggle is hidden on larger screens */
+@media screen and (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .navbar .nav-links {
+    display: flex !important;
+  }
+}

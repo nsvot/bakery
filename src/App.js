@@ -63,19 +63,26 @@ function App() {
   );
 }
 
-// Navigation Component
 function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="container">
         <Link to="/" className="brand-name">
           Sweet Treats Bakery
         </Link>
-        <div className="nav-links">
-          <Link to="/" className="nav-link">Home</Link>
-          <Link to="/menu" className="nav-link">Menu</Link>
-          <Link to="/about" className="nav-link">About</Link>
-          <Link to="/contact" className="nav-link">Contact</Link>
+        <button 
+          className="menu-toggle" 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          ☰
+        </button>
+        <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+          <Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
+          <Link to="/menu" className="nav-link" onClick={() => setIsMenuOpen(false)}>Menu</Link>
+          <Link to="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>About</Link>
+          <Link to="/contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>Contact</Link>
         </div>
       </div>
     </nav>
