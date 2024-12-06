@@ -1,50 +1,54 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css'; // Import the CSS file
-
+import ChocolateCookies from "./images/chocolate_cookies.jpg"
+import CupCake from "./images/cup_cake.jpg"
+import Sandwich from "./images/sandwich.jpg"
+import GarlicBread from "./images/garlic_bread.jpg"
+import Cake from "./images/cake.jpg"
 // Mock product data
 const productData = [
   {
     id: 1,
-    name: "Classic Chocolate Cake",
+    name: "Pan Cake",
     description: "Rich chocolate cake with decadent frosting",
     price: 35.99,
     image: "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     id: 2,
-    name: "Veg Burger",
-    description: "Properly Made burger with veggies and tomato kethup",
+    name: "Chocolate Cookies",
+    description: "Properly Made Cookies with chocolate.",
     price: 28.50,
-    image: "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=600"
+    image: ChocolateCookies
   },
   {
     id: 3,
-    name: "Fish Fry",
-    description: "Soft red Fish with cream cheese frosting",
+    name: "Cup Cake",
+    description: "Soft cup cake with cream cheese frosting",
     price: 40.75,
-    image: "https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=600"
+    image: CupCake
   },
   {
     id: 4,
-    name: "Boiled Egg",
-    description: "Boiled eggs with Veggies",
+    name: "Sandwich",
+    description: "Sandwich with Veggies and freash bread.",
     price: 23.75,
-    image: "https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&cs=tinysrgb&w=600"
+    image:Sandwich
   },
   {
     id: 5,
-    name: "Maccaroni Pizza",
-    description: "Crispy Crust maccoroni pizza",
+    name: "Garlic Bread",
+    description: "Crispy Crust Garlic Bread",
     price: 13.75,
-    image: "https://images.pexels.com/photos/604969/pexels-photo-604969.jpeg?auto=compress&cs=tinysrgb&w=600"
+    image: GarlicBread
   },
   {
     id: 6,
-    name: "Donuts",
-    description: "Fresh Donuts with multiple flavours",
-    price: 10.75,
-    image: "https://images.pexels.com/photos/3338681/pexels-photo-3338681.jpeg?auto=compress&cs=tinysrgb&w=600"
+    name: "Cake",
+    description: "Fresh Cake with chocolate flavours",
+    price: 20,
+    image:Cake
   },
 
 
